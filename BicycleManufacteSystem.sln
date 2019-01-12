@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BicycleManufacteSystem", "BicycleManufacteSystem\BicycleManufacteSystem.csproj", "{3763B982-AC50-4D4C-A564-DE2F1B87614F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3763B982-AC50-4D4C-A564-DE2F1B87614F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3763B982-AC50-4D4C-A564-DE2F1B87614F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3763B982-AC50-4D4C-A564-DE2F1B87614F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3763B982-AC50-4D4C-A564-DE2F1B87614F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1E6AF06E-F4CF-421C-B1AA-1E79F3D113AA}
+	EndGlobalSection
+EndGlobal

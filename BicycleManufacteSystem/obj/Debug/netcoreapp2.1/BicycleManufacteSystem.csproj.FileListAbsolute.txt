@@ -1,0 +1,8 @@
+C:\Users\rgouthaman\source\repos\BicycleManufacteSystem\BicycleManufacteSystem\bin\Debug\netcoreapp2.1\BicycleManufacteSystem.deps.json
+C:\Users\rgouthaman\source\repos\BicycleManufacteSystem\BicycleManufacteSystem\bin\Debug\netcoreapp2.1\BicycleManufacteSystem.runtimeconfig.json
+C:\Users\rgouthaman\source\repos\BicycleManufacteSystem\BicycleManufacteSystem\bin\Debug\netcoreapp2.1\BicycleManufacteSystem.runtimeconfig.dev.json
+C:\Users\rgouthaman\source\repos\BicycleManufacteSystem\BicycleManufacteSystem\bin\Debug\netcoreapp2.1\BicycleManufacteSystem.dll
+C:\Users\rgouthaman\source\repos\BicycleManufacteSystem\BicycleManufacteSystem\obj\Debug\netcoreapp2.1\BicycleManufacteSystem.csprojAssemblyReference.cache
+C:\Users\rgouthaman\source\repos\BicycleManufacteSystem\BicycleManufacteSystem\obj\Debug\netcoreapp2.1\BicycleManufacteSystem.csproj.CoreCompileInputs.cache
+C:\Users\rgouthaman\source\repos\BicycleManufacteSystem\BicycleManufacteSystem\obj\Debug\netcoreapp2.1\BicycleManufacteSystem.AssemblyInfoInputs.cache
+C:\Users\rgouthaman\source\repos\BicycleManufacteSystem\BicycleManufacteSystem\obj\Debug\netcoreapp2.1\BicycleManufacteSystem.AssemblyInfo.cs
