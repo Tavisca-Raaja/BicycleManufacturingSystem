@@ -19,28 +19,35 @@ namespace BicycleManufacteSystem.Models
         {
             var res = new GearCycle();
 
-            return new NonGearCycle();
+            return new GearCycle();
         }
 
         public IBicycle ManufactureOnOrder(ManufactureRequest order)
         {
-            throw new NotImplementedException();
+            var orderType = CycleList.GetModelType(order.ModelNumber);
+            if (string.IsNullOrWhiteSpace(orderType.ToString()))
+                return null;
+            if (orderType == BicycleType.Gear)
+                return new GearCycle();
+            return new NonGearCycle();
         }
     }
 
-    public class CycleList
+    public static class CycleList
     {
-        List<CycleProductionStore> cycle = new List<CycleProductionStore>
+        public static List<CycleProductionStore> cycle = new List<CycleProductionStore>
         {
             new CycleProductionStore{ ModelNumber="A101" , Type =BicycleType.Gear},
             new CycleProductionStore{ModelNumber="A102",Type=BicycleType.NonGear}
         };
 
-        public BicycleType GetModelType(string modelNumber)
+        public static BicycleType? GetModelType(string modelNumber)
         {
             var requestItem = cycle.SingleOrDefault(x => x.ModelNumber == modelNumber);
 
-            return requestItem.Type;
+            
+
+            return requestItem?.Type;
         }
     }
 }

@@ -14,9 +14,24 @@ namespace BicycleManufacteSystem
             var serviceProvider = services.BuildServiceProvider();
             var appServiceProvider = serviceProvider.GetService<IBicycleCompany>();
             var response = appServiceProvider.Manufacture();
-            response.ApplyBrake();
-            response.MoveForward();
-            response.
+            var responseByOrder 
+                = appServiceProvider.ManufactureOnOrder(new ManufactureRequest
+                                                                             {
+                                                                                 ModelNumber = "A101",
+                                                                                  Quantity = 1
+                                                                              }
+                                                        );
+            var res = response as GearCycle;
+            if(res!=null)
+            {
+                res.DefaultGear = 0;
+                res.MaximumGear = 3;
+                res.IncreaseGear();
+                res.DecreaseGear();
+                res.ApplyBrake();
+            }
+            Console.ReadKey();
+            
         }
     }
 }

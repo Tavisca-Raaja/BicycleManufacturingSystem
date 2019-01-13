@@ -6,3 +6,14 @@ C:\Users\rgouthaman\source\repos\BicycleManufacteSystem\BicycleManufacteSystem\o
 C:\Users\rgouthaman\source\repos\BicycleManufacteSystem\BicycleManufacteSystem\obj\Debug\netcoreapp2.1\BicycleManufacteSystem.csproj.CoreCompileInputs.cache
 C:\Users\rgouthaman\source\repos\BicycleManufacteSystem\BicycleManufacteSystem\obj\Debug\netcoreapp2.1\BicycleManufacteSystem.AssemblyInfoInputs.cache
 C:\Users\rgouthaman\source\repos\BicycleManufacteSystem\BicycleManufacteSystem\obj\Debug\netcoreapp2.1\BicycleManufacteSystem.AssemblyInfo.cs
+C:\Users\HARIKEERTHIRAJ\Desktop\BicycleManufacturingSystem\BicycleManufacteSystem\bin\Debug\netcoreapp2.1\BicycleManufacteSystem.deps.json
+C:\Users\HARIKEERTHIRAJ\Desktop\BicycleManufacturingSystem\BicycleManufacteSystem\bin\Debug\netcoreapp2.1\BicycleManufacteSystem.runtimeconfig.json
+C:\Users\HARIKEERTHIRAJ\Desktop\BicycleManufacturingSystem\BicycleManufacteSystem\bin\Debug\netcoreapp2.1\BicycleManufacteSystem.runtimeconfig.dev.json
+C:\Users\HARIKEERTHIRAJ\Desktop\BicycleManufacturingSystem\BicycleManufacteSystem\bin\Debug\netcoreapp2.1\BicycleManufacteSystem.dll
+C:\Users\HARIKEERTHIRAJ\Desktop\BicycleManufacturingSystem\BicycleManufacteSystem\bin\Debug\netcoreapp2.1\BicycleManufacteSystem.pdb
+C:\Users\HARIKEERTHIRAJ\Desktop\BicycleManufacturingSystem\BicycleManufacteSystem\obj\Debug\netcoreapp2.1\BicycleManufacteSystem.csprojAssemblyReference.cache
+C:\Users\HARIKEERTHIRAJ\Desktop\BicycleManufacturingSystem\BicycleManufacteSystem\obj\Debug\netcoreapp2.1\BicycleManufacteSystem.csproj.CoreCompileInputs.cache
+C:\Users\HARIKEERTHIRAJ\Desktop\BicycleManufacturingSystem\BicycleManufacteSystem\obj\Debug\netcoreapp2.1\BicycleManufacteSystem.AssemblyInfoInputs.cache
+C:\Users\HARIKEERTHIRAJ\Desktop\BicycleManufacturingSystem\BicycleManufacteSystem\obj\Debug\netcoreapp2.1\BicycleManufacteSystem.AssemblyInfo.cs
+C:\Users\HARIKEERTHIRAJ\Desktop\BicycleManufacturingSystem\BicycleManufacteSystem\obj\Debug\netcoreapp2.1\BicycleManufacteSystem.dll
+C:\Users\HARIKEERTHIRAJ\Desktop\BicycleManufacturingSystem\BicycleManufacteSystem\obj\Debug\netcoreapp2.1\BicycleManufacteSystem.pdb
