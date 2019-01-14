@@ -5,25 +5,18 @@ using System.Text;
 
 namespace BicycleManufacteSystem.Models
 {
-    public class GearCycle : IGearCycle
+    public class GearCycle :Bicycle,IGearCycle
     {
-        public string Color { get; set; }
-        public string Material { get; set; }
-        public string Wheel { get; set; }
-        public string HandleBar { get; set; }
-        public string Bell { get; set; }
-        public string Pedal { get; set; }
         public int MaximumGear { get; set; }
         public int DefaultGear { get; set; }
         public int CurrentGear { get; set; }
-        public void ApplyBrake()
+      
+        public GearCycle(string color):base(color)
         {
-            Console.WriteLine("Brake Applied Successfully");
-        }
+            MaximumGear = 5;
+            DefaultGear = 1;
+            CurrentGear = 1;
 
-        public void ApplyHorn()
-        {
-            Console.WriteLine("Horn Applied Successfully");
         }
 
         public void DecreaseGear()
@@ -52,19 +45,6 @@ namespace BicycleManufacteSystem.Models
             }
         }
 
-        public void MoveBackWard()
-        {
-            Console.WriteLine("Moving in reverse Direction");
-        }
-
-        public void MoveForward()
-        {
-            Console.WriteLine("Moving in Forward Direction");
-        }
-
-        public void Turn()
-        {
-            Console.WriteLine("Turn Applied");
-        }
+        
     }
 }

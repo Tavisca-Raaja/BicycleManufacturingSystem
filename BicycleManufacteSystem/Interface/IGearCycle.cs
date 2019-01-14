@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BicycleManufacteSystem.Interface
 {
-    public interface IGearCycle :IBicycle
+    public interface IGearCycle
     {
         void IncreaseGear();
         void DecreaseGear();

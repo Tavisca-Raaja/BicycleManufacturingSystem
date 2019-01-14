@@ -10,26 +10,30 @@ namespace BicycleManufacteSystem.Models
     {
         public int ManufactureThreshold{ get; set; }
         public BicycleType DefaultProductionType { get; set; }
-        public BicycleManufacturingCompany()
+        public string DefaultProductionColor { get; set; }
+
+        private readonly BicycleFactory _factoryInitiater;
+        public BicycleManufacturingCompany(BicycleFactory factoryInitiater)
         {
+            _factoryInitiater = factoryInitiater;
             ManufactureThreshold = 10;
             DefaultProductionType = BicycleType.Gear;
         } 
         public IBicycle Manufacture()
         {
-            var res = new GearCycle();
-
-            return new GearCycle();
+            return _factoryInitiater.GetBicycle(DefaultProductionType,DefaultProductionColor);
         }
 
         public IBicycle ManufactureOnOrder(ManufactureRequest order)
         {
-            var orderType = CycleList.GetModelType(order.ModelNumber);
-            if (string.IsNullOrWhiteSpace(orderType.ToString()))
-                return null;
-            if (orderType == BicycleType.Gear)
-                return new GearCycle();
-            return new NonGearCycle();
+            var response = CycleList.GetModelType(order.ModelNumber);
+            BicycleType orderType;
+
+            if (string.IsNullOrWhiteSpace(response))
+                return null;    
+            
+            Enum.TryParse(response,out orderType);
+            return _factoryInitiater.GetBicycle(orderType,order.color);
         }
     }
 
@@ -41,13 +45,10 @@ namespace BicycleManufacteSystem.Models
             new CycleProductionStore{ModelNumber="A102",Type=BicycleType.NonGear}
         };
 
-        public static BicycleType? GetModelType(string modelNumber)
+        public static string GetModelType(string modelNumber)
         {
-            var requestItem = cycle.SingleOrDefault(x => x.ModelNumber == modelNumber);
-
-            
-
-            return requestItem?.Type;
+            var requestItem = cycle.FirstOrDefault(x => x.ModelNumber == modelNumber);
+            return requestItem?.Type.ToString();
         }
     }
 }

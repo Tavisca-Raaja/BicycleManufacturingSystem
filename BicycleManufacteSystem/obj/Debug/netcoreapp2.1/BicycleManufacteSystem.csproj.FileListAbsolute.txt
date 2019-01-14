@@ -17,3 +17,6 @@ C:\Users\HARIKEERTHIRAJ\Desktop\BicycleManufacturingSystem\BicycleManufacteSyste
 C:\Users\HARIKEERTHIRAJ\Desktop\BicycleManufacturingSystem\BicycleManufacteSystem\obj\Debug\netcoreapp2.1\BicycleManufacteSystem.AssemblyInfo.cs
 C:\Users\HARIKEERTHIRAJ\Desktop\BicycleManufacturingSystem\BicycleManufacteSystem\obj\Debug\netcoreapp2.1\BicycleManufacteSystem.dll
 C:\Users\HARIKEERTHIRAJ\Desktop\BicycleManufacturingSystem\BicycleManufacteSystem\obj\Debug\netcoreapp2.1\BicycleManufacteSystem.pdb
+C:\Users\rgouthaman\source\repos\BicycleManufacteSystem\BicycleManufacteSystem\bin\Debug\netcoreapp2.1\BicycleManufacteSystem.pdb
+C:\Users\rgouthaman\source\repos\BicycleManufacteSystem\BicycleManufacteSystem\obj\Debug\netcoreapp2.1\BicycleManufacteSystem.dll
+C:\Users\rgouthaman\source\repos\BicycleManufacteSystem\BicycleManufacteSystem\obj\Debug\netcoreapp2.1\BicycleManufacteSystem.pdb

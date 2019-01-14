@@ -10,26 +10,24 @@ namespace BicycleManufacteSystem
         static void Main(string[] args)
         {
             var services = new ServiceCollection()
-                .AddTransient<IBicycleCompany,BicycleManufacturingCompany> ();
+                .AddTransient<IBicycleCompany, BicycleManufacturingCompany>()
+                .AddSingleton<BicycleFactory, ConcreteBicycleFactory>();
+                
             var serviceProvider = services.BuildServiceProvider();
             var appServiceProvider = serviceProvider.GetService<IBicycleCompany>();
             var response = appServiceProvider.Manufacture();
             var responseByOrder 
                 = appServiceProvider.ManufactureOnOrder(new ManufactureRequest
                                                                              {
-                                                                                 ModelNumber = "A101",
-                                                                                  Quantity = 1
+                                                                                 ModelNumber = "A",
+                                                                                  Quantity = 1,
+                                                                                  color ="Red"
                                                                               }
                                                         );
             var res = response as GearCycle;
-            if(res!=null)
-            {
-                res.DefaultGear = 0;
-                res.MaximumGear = 3;
-                res.IncreaseGear();
-                res.DecreaseGear();
-                res.ApplyBrake();
-            }
+            res.ApplyBrake();
+       
+
             Console.ReadKey();
             
         }
