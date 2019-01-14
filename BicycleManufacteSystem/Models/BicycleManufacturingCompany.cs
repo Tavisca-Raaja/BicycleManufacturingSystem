@@ -28,7 +28,7 @@ namespace BicycleManufacteSystem.Models
         {
             var response = CycleList.GetModelType(order.ModelNumber);
             BicycleType orderType;
-
+            
             if (string.IsNullOrWhiteSpace(response))
                 return null;    
             
