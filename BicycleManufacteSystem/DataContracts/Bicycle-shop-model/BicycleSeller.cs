@@ -1,13 +1,12 @@
-﻿
+﻿using BicycleManufacteSystem.DataContracts.Interface;
 using BicycleManufacteSystem.Interface;
 using BicycleManufacteSystem.Models;
-using BicycleShop.Interface;
-using BicycleShop.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
-namespace BicycleShop
+namespace BicycleManufacteSystem.DataContracts.Bicycle_shop_model
 {
     public class BicycleSeller : IBicycleSeller
     {
@@ -21,11 +20,12 @@ namespace BicycleShop
             return _cycleManufacturer.ManufactureOnOrder(order);
         }
 
+       
         public ManufactureResponse SellBicycle(ManufactureRequest order)
         {
             var availability = Stock.CheckAvailability(order.ModelNumber);
             if (availability == null)
-              return PlaceOrder(order);
+                return PlaceOrder(order);
 
             return availability;
         }

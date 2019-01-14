@@ -1,12 +1,10 @@
-﻿using BicycleCustomer.Interface;
-using BicycleManufacteSystem.Interface;
+﻿using BicycleManufacteSystem.DataContracts.Interface;
 using BicycleManufacteSystem.Models;
-using BicycleShop.Interface;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BicycleCustomer
+namespace BicycleManufacteSystem.DataContracts.Customer_Model
 {
     public class Customer : IPlaceOrder
     {
@@ -21,7 +19,7 @@ namespace BicycleCustomer
 
         public ManufactureResponse PlaceOrder(ManufactureRequest order)
         {
-            return _shop.PlaceOrder(order);
+            return _shop.SellBicycle(order);
         }
     }
 }

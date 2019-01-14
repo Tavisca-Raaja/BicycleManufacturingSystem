@@ -1,4 +1,7 @@
-﻿using BicycleManufacteSystem.Interface;
+﻿using BicycleManufacteSystem.DataContracts.Bicycle_shop_model;
+using BicycleManufacteSystem.DataContracts.Customer_Model;
+using BicycleManufacteSystem.DataContracts.Interface;
+using BicycleManufacteSystem.Interface;
 using BicycleManufacteSystem.Models;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -11,19 +14,17 @@ namespace BicycleManufacteSystem
         {
             var services = new ServiceCollection()
                 .AddTransient<IBicycleCompany, BicycleManufacturingCompany>()
-                .AddSingleton<BicycleFactory, ConcreteBicycleFactory>();
+                .AddSingleton<BicycleFactory, ConcreteBicycleFactory>()
+                .AddSingleton<IPlaceOrder,Customer>()
+                .AddSingleton<IBicycleSeller, BicycleSeller>();
                 
             var serviceProvider = services.BuildServiceProvider();
-            var appServiceProvider = serviceProvider.GetService<IBicycleCompany>();
-            var response = appServiceProvider.Manufacture();
-            var responseByOrder 
-                = appServiceProvider.ManufactureOnOrder(new ManufactureRequest
-                                                                             {
-                                                                                 ModelNumber = "A102",
-                                                                                  Quantity = 1,
-                                                                                  color ="Red"
-                                                                              }
-                                                        );
+            var appServiceProvider = serviceProvider.GetService<IPlaceOrder>();
+            var response = appServiceProvider.PlaceOrder(new ManufactureRequest{
+                                                                                 ModelNumber="A102",
+                                                                                 color="Blue",
+                                                                                 Quantity=1
+                                                                               });
           
             
         

@@ -3,9 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BicycleShop.Models
+namespace BicycleManufacteSystem.DataContracts.Bicycle_shop_model
 {
-    public class BicycleStock
+    
+       public class BicycleStock
     {
         public string ModelNumber { get; set; }
 
