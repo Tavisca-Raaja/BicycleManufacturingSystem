@@ -19,21 +19,29 @@ namespace BicycleManufacteSystem.Models
             ManufactureThreshold = 10;
             DefaultProductionType = BicycleType.Gear;
         } 
-        public IBicycle Manufacture()
+        public ManufactureResponse Manufacture()
         {
-            return _factoryInitiater.GetBicycle(DefaultProductionType,DefaultProductionColor);
+            return new ManufactureResponse{ 
+                                             ModelNumber="A200",
+                                             Price=6000,
+                                             Cycle =_factoryInitiater.GetBicycle(DefaultProductionType, DefaultProductionColor)
+                                          };
         }
 
-        public IBicycle ManufactureOnOrder(ManufactureRequest order)
+        public ManufactureResponse ManufactureOnOrder(ManufactureRequest order)
         {
-            var response = CycleList.GetModelType(order.ModelNumber);
-            BicycleType orderType;
+            var response = CycleList.GetModelType(order.ModelNumber);     
+            if (response == null)
+                return null;
+
+           
+            return new ManufactureResponse
+            {
+                ModelNumber = response.ModelNumber,
+                Price = response.price,
+                Cycle = _factoryInitiater.GetBicycle(response.Type, order.color)
+        };
             
-            if (string.IsNullOrWhiteSpace(response))
-                return null;    
-            
-            Enum.TryParse(response,out orderType);
-            return _factoryInitiater.GetBicycle(orderType,order.color);
         }
     }
 
@@ -41,14 +49,14 @@ namespace BicycleManufacteSystem.Models
     {
         public static List<CycleProductionStore> cycle = new List<CycleProductionStore>
         {
-            new CycleProductionStore{ ModelNumber="A101" , Type =BicycleType.Gear},
-            new CycleProductionStore{ModelNumber="A102",Type=BicycleType.NonGear}
+            new CycleProductionStore{ ModelNumber="A101" , Type =BicycleType.Gear,price=8000},
+            new CycleProductionStore{ModelNumber="A102",Type=BicycleType.NonGear,price=6000}
         };
 
-        public static string GetModelType(string modelNumber)
+        public static CycleProductionStore GetModelType(string modelNumber)
         {
             var requestItem = cycle.FirstOrDefault(x => x.ModelNumber == modelNumber);
-            return requestItem?.Type.ToString();
+            return requestItem;
         }
     }
 }

@@ -7,7 +7,8 @@ namespace BicycleManufacteSystem.Interface
 {
     public interface IBicycleCompany
     {
-        IBicycle Manufacture();
-        IBicycle ManufactureOnOrder(ManufactureRequest order);
+        ManufactureResponse Manufacture();
+       ManufactureResponse ManufactureOnOrder(ManufactureRequest order);
+
     }
 }

@@ -8,6 +8,6 @@ namespace BicycleCustomer.Interface
 {
     public interface IPlaceOrder
     {
-        IBicycle PlaceOrder(ManufactureRequest order);
+        ManufactureResponse PlaceOrder(ManufactureRequest order);
     }
 }

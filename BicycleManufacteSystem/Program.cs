@@ -19,15 +19,14 @@ namespace BicycleManufacteSystem
             var responseByOrder 
                 = appServiceProvider.ManufactureOnOrder(new ManufactureRequest
                                                                              {
-                                                                                 ModelNumber = "A",
+                                                                                 ModelNumber = "A102",
                                                                                   Quantity = 1,
                                                                                   color ="Red"
                                                                               }
                                                         );
-            var res = response as GearCycle;
-            res.ApplyBrake();
-       
-
+          
+            
+        
             Console.ReadKey();
             
         }

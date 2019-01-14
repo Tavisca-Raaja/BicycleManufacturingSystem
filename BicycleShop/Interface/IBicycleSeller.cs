@@ -8,6 +8,7 @@ namespace BicycleShop.Interface
 {
     public interface IBicycleSeller
     {
-        IBicycle SellBicycle(ManufactureRequest order);
+        ManufactureResponse SellBicycle(ManufactureRequest order);
+        ManufactureResponse PlaceOrder(ManufactureRequest order);
     }
 }

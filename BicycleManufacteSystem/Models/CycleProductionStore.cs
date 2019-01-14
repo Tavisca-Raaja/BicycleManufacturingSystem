@@ -8,6 +8,7 @@ namespace BicycleManufacteSystem.Models
     {
         public string ModelNumber { get; set; }
         public BicycleType Type { get; set; }
+        public Decimal price { get; set; }
     }
 
     public enum BicycleType

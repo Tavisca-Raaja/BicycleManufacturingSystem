@@ -1,4 +1,4 @@
-﻿using BicycleCustomer.Interface;
+﻿
 using BicycleManufacteSystem.Interface;
 using BicycleManufacteSystem.Models;
 using BicycleShop.Interface;
@@ -9,32 +9,40 @@ using System.Linq;
 
 namespace BicycleShop
 {
-    public class BicycleSeller : IBicycleSeller, IPlaceOrder
+    public class BicycleSeller : IBicycleSeller
     {
-        public IBicycle PlaceOrder(ManufactureRequest order)
+        private readonly IBicycleCompany _cycleManufacturer;
+        public BicycleSeller(IBicycleCompany cycleManufacturer)
         {
-            throw new NotImplementedException();
+            _cycleManufacturer = cycleManufacturer;
+        }
+        public ManufactureResponse PlaceOrder(ManufactureRequest order)
+        {
+            return _cycleManufacturer.ManufactureOnOrder(order);
         }
 
-        public IBicycle SellBicycle(ManufactureRequest order)
+        public ManufactureResponse SellBicycle(ManufactureRequest order)
         {
-            var checkAvailability = Stock.CheckAvailability(order.ModelNumber);
-            return null;
+            var availability = Stock.CheckAvailability(order.ModelNumber);
+            if (availability == null)
+              return PlaceOrder(order);
+
+            return availability;
         }
     }
 
     public static class Stock
     {
-        static List<IBicycle> AvailableCycle = new List<IBicycle>
+        static List<ManufactureResponse> AvailableCycle = new List<ManufactureResponse>
         {
-            new Bicycle{},
+            new ManufactureResponse{ModelNumber="A101",Price=8000,Cycle=new GearCycle("red")}
         };
 
-        public static BicycleType? CheckAvailability(string modelNumber)
+        public static ManufactureResponse CheckAvailability(string modelNumber)
         {
             var response = AvailableCycle.FirstOrDefault(availability => availability.ModelNumber == modelNumber);
 
-            return null;
+            return response;
 
         }
     }

@@ -229,19 +229,6 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "BicycleCustomer/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.1",
-        "dependencies": {
-          "BicycleManufacteSystem": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/BicycleCustomer.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/BicycleCustomer.dll": {}
-        }
-      },
       "BicycleManufacteSystem/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
@@ -260,7 +247,7 @@
   },
   "libraries": {
     "Microsoft.Extensions.DependencyInjection/2.2.0": {
-      "sha512": "MZtBIwfDFork5vfjpJdG5g8wuJFt7d/y3LOSVVtDK/76wlbtz6cjltfKHqLx2TKVqTj5/c41t77m1+h20zqtPA==",
+      "sha512": "ASF77AJjnyi9hL7IJU1KCAvnCTgI3JEwkU+D4gnKd53nFIYpibVjR6SW8tdTkkuZ+QkmIx2rPvKdTMNVPfVU9A==",
       "type": "package",
       "path": "microsoft.extensions.dependencyinjection/2.2.0",
       "files": [
@@ -277,7 +264,7 @@
       ]
     },
     "Microsoft.Extensions.DependencyInjection.Abstractions/2.2.0": {
-      "sha512": "f9hstgjVmr6rmrfGSpfsVOl2irKAgr1QjrSi3FgnS7kulxband50f2brRLwySAQTADPZeTdow0mpSMcoAdadCw==",
+      "sha512": "2xMk9LHz1EY+7gVG0lG4qBvkUiVjg8QNPqd2HYmEP5+PL7Ayo96EhBieAhd++Gx4yM+xN8kNqmhZdFMBHeG0HQ==",
       "type": "package",
       "path": "microsoft.extensions.dependencyinjection.abstractions/2.2.0",
       "files": [
@@ -759,11 +746,6 @@
         "netstandard.library.nuspec"
       ]
     },
-    "BicycleCustomer/1.0.0": {
-      "type": "project",
-      "path": "../BicycleCustomer/BicycleCustomer.csproj",
-      "msbuildProject": "../BicycleCustomer/BicycleCustomer.csproj"
-    },
     "BicycleManufacteSystem/1.0.0": {
       "type": "project",
       "path": "../BicycleManufacteSystem/BicycleManufacteSystem.csproj",
@@ -772,29 +754,28 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
-      "BicycleCustomer >= 1.0.0",
       "BicycleManufacteSystem >= 1.0.0",
       "Microsoft.NETCore.App >= 2.1.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rgouthaman\\.nuget\\packages\\": {},
+    "C:\\Users\\HARIKEERTHIRAJ\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rgouthaman\\source\\repos\\BicycleManufacteSystem\\BicycleShop\\BicycleShop.csproj",
+      "projectUniqueName": "C:\\Users\\HARIKEERTHIRAJ\\Desktop\\BicycleManufacturingSystem\\BicycleShop\\BicycleShop.csproj",
       "projectName": "BicycleShop",
-      "projectPath": "C:\\Users\\rgouthaman\\source\\repos\\BicycleManufacteSystem\\BicycleShop\\BicycleShop.csproj",
-      "packagesPath": "C:\\Users\\rgouthaman\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rgouthaman\\source\\repos\\BicycleManufacteSystem\\BicycleShop\\obj\\",
+      "projectPath": "C:\\Users\\HARIKEERTHIRAJ\\Desktop\\BicycleManufacturingSystem\\BicycleShop\\BicycleShop.csproj",
+      "packagesPath": "C:\\Users\\HARIKEERTHIRAJ\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\HARIKEERTHIRAJ\\Desktop\\BicycleManufacturingSystem\\BicycleShop\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\rgouthaman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\HARIKEERTHIRAJ\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -802,17 +783,13 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "http://stage-packagegallery.tavisca.com/api/odata": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\rgouthaman\\source\\repos\\BicycleManufacteSystem\\BicycleCustomer\\BicycleCustomer.csproj": {
-              "projectPath": "C:\\Users\\rgouthaman\\source\\repos\\BicycleManufacteSystem\\BicycleCustomer\\BicycleCustomer.csproj"
-            },
-            "C:\\Users\\rgouthaman\\source\\repos\\BicycleManufacteSystem\\BicycleManufacteSystem\\BicycleManufacteSystem.csproj": {
-              "projectPath": "C:\\Users\\rgouthaman\\source\\repos\\BicycleManufacteSystem\\BicycleManufacteSystem\\BicycleManufacteSystem.csproj"
+            "C:\\Users\\HARIKEERTHIRAJ\\Desktop\\BicycleManufacturingSystem\\BicycleManufacteSystem\\BicycleManufacteSystem.csproj": {
+              "projectPath": "C:\\Users\\HARIKEERTHIRAJ\\Desktop\\BicycleManufacturingSystem\\BicycleManufacteSystem\\BicycleManufacteSystem.csproj"
             }
           }
         }

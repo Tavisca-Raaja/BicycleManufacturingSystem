@@ -1,6 +1,7 @@
 ﻿using BicycleCustomer.Interface;
 using BicycleManufacteSystem.Interface;
 using BicycleManufacteSystem.Models;
+using BicycleShop.Interface;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,11 +10,18 @@ namespace BicycleCustomer
 {
     public class Customer : IPlaceOrder
     {
+        private readonly IBicycleSeller _shop;
+
         public string CustomerName { get; set; }
 
-        public IBicycle PlaceOrder(ManufactureRequest order)
+        public Customer(IBicycleSeller shop)
         {
-            throw new NotImplementedException();
+            _shop = shop;
+        }
+
+        public ManufactureResponse PlaceOrder(ManufactureRequest order)
+        {
+            return _shop.PlaceOrder(order);
         }
     }
 }
